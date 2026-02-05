@@ -41,7 +41,7 @@ export function WalletConnect() {
             <p className="text-gray-400 text-sm">当前网络</p>
             <select
               value={chainId}
-              onChange={(e) => switchChain({ chainId: Number(e.target.value) })}
+              onChange={(e) => switchChain({ chainId: Number(e.target.value) as 1 | 56 | 137 | 42161 })}
               className="bg-gray-700 text-white rounded-lg px-3 py-2 w-full mt-1"
             >
               {chains.map((chain) => (
